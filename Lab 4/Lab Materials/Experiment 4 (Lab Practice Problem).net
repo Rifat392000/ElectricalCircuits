@@ -1,0 +1,15 @@
+* Schematics Netlist *
+
+
+
+R_R3         X 0  8  
+H_H1         $N_0001 Voltmeter+ VH_H1 0.5
+VH_H1        A B 0V
+V_V1         A 0 10V
+E_E2         $N_0002 0 Voltmeter+ X 1
+R_R7         0 $N_0002  1k  
+R_R5         $N_0003 0  4  
+G_G2         $N_0004 $N_0001 X 0 0.5
+R_R1         B $N_0001  8  
+R_R4         $N_0004 $N_0003  16  
+R_R2         Voltmeter+ X  20  

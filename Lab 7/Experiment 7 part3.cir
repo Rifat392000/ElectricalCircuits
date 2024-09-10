@@ -1,0 +1,24 @@
+* I:\3. East West University\BSC   IN   CSE\COURSE\5th SEMESTER = SUMMER 2021\CSE209\CSE209 Lab Experiment\Lab 7\Experiment 7 part3.sch
+
+* Schematics Version 9.1 - Web Update 1
+* Mon Sep 06 10:30:42 2021
+
+
+.PARAM         RVAR=10 
+
+** Analysis setup **
+.DC LIN PARAM RVAR 1 20 0.1 
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "Experiment 7 part3.net"
+.INC "Experiment 7 part3.als"
+
+
+.probe
+
+
+.END

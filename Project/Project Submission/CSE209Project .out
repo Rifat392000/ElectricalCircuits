@@ -1,0 +1,215 @@
+
+**** 09/11/21 00:23:02 *********** Evaluation PSpice (Nov 1999) **************
+
+ * I:\3. East West University\BSC   IN   CSE\COURSE\5th SEMESTER = SUMMER 2021\CSE209\CSE209 Lab Experiment\Project\Project in Sir\CS
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.1 - Web Update 1
+* Sat Sep 11 00:22:58 2021
+
+
+.PARAM         RVAR=10 
+
+** Analysis setup **
+.DC LIN PARAM RVAR 0.001 10 0.001 
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "CSE209Project .net"
+
+**** INCLUDING "CSE209Project .net" ****
+* Schematics Netlist *
+
+
+
+R_R1         POS NEG  1  
+I_I1         0 POS DC 1A  
+R_R2         POS 0  4  
+R_R3         $N_0001 0  1  
+R_R4         CP 0  4  
+R_R7         NEG $N_0002  2  
+H_H1         $N_0001 POS VH_H1 4
+VH_H1        NEG CP 0V
+G_G1         NEG $N_0001 POS NEG 2
+I_I2         $N_0002 0 DC 0A  
+R_R8         POS1 NEG1  1  
+I_I3         0 POS1 DC 1A  
+R_R9         POS1 0  4  
+R_R10         $N_0003 0  1  
+R_R11         CP1 0  4  
+R_R12         NEG1 $N_0004  2  
+H_H2         $N_0003 POS1 VH_H2 4
+VH_H2        NEG1 CP1 0V
+G_G2         NEG1 $N_0003 POS1 NEG1 2
+V_V3         $N_0005 0 457.14mV
+V_V1         $N_0004 0 0V
+I_I14         0 $N_0006 DC 0A  
+I_I13         0 $N_0006 DC 242.42mA  
+I_I12         0 POS2 DC 1A  
+R_R20         POS2 0  4  
+R_R21         $N_0007 0  1  
+R_R22         CP2 0  4  
+R_R23         NEG2 $N_0008  2  
+H_H4         $N_0007 POS2 VH_H4 4
+VH_H4        NEG2 CP2 0V
+G_G4         NEG2 $N_0007 POS2 NEG2 2
+R_R19         POS2 NEG2  1  
+R_R27         $N_0009 0  1k  
+R_R25         $N_0006 0  1.886  
+R_RL1         $N_0008 0  {RVAR}  
+R_RL         $N_0005 $N_0009  1.8860  
+
+**** RESUMING "CSE209Project .cir" ****
+.INC "CSE209Project .als"
+
+
+
+**** INCLUDING "CSE209Project .als" ****
+* Schematics Aliases *
+
+.ALIASES
+R_R1            R1(1=POS 2=NEG )
+I_I1            I1(+=0 -=POS )
+R_R2            R2(1=POS 2=0 )
+R_R3            R3(1=$N_0001 2=0 )
+R_R4            R4(1=CP 2=0 )
+R_R7            R7(1=NEG 2=$N_0002 )
+H_H1            H1(3=$N_0001 4=POS )
+VH_H1           H1(1=NEG 2=CP )
+G_G1            G1(3=NEG 4=$N_0001 1=POS 2=NEG )
+I_I2            I2(+=$N_0002 -=0 )
+R_R8            R8(1=POS1 2=NEG1 )
+I_I3            I3(+=0 -=POS1 )
+R_R9            R9(1=POS1 2=0 )
+R_R10           R10(1=$N_0003 2=0 )
+R_R11           R11(1=CP1 2=0 )
+R_R12           R12(1=NEG1 2=$N_0004 )
+H_H2            H2(3=$N_0003 4=POS1 )
+VH_H2           H2(1=NEG1 2=CP1 )
+G_G2            G2(3=NEG1 4=$N_0003 1=POS1 2=NEG1 )
+V_V3            V3(+=$N_0005 -=0 )
+V_V1            V1(+=$N_0004 -=0 )
+I_I14           I14(+=0 -=$N_0006 )
+I_I13           I13(+=0 -=$N_0006 )
+I_I12           I12(+=0 -=POS2 )
+R_R20           R20(1=POS2 2=0 )
+R_R21           R21(1=$N_0007 2=0 )
+R_R22           R22(1=CP2 2=0 )
+R_R23           R23(1=NEG2 2=$N_0008 )
+H_H4            H4(3=$N_0007 4=POS2 )
+VH_H4           H4(1=NEG2 2=CP2 )
+G_G4            G4(3=NEG2 4=$N_0007 1=POS2 2=NEG2 )
+R_R19           R19(1=POS2 2=NEG2 )
+R_R27           R27(1=$N_0009 2=0 )
+R_R25           R25(1=$N_0006 2=0 )
+R_RL1           RL1(1=$N_0008 2=0 )
+R_RL            RL(1=$N_0005 2=$N_0009 )
+_    _(CP=CP)
+_    _(POS=POS)
+_    _(CN=NEG)
+_    _(NEG=NEG)
+_    _(CP1=CP1)
+_    _(POS1=POS1)
+_    _(NEG1=NEG1)
+_    _(CN1=NEG1)
+_    _(CP2=CP2)
+_    _(POS2=POS2)
+_    _(CN2=NEG2)
+_    _(NEG2=NEG2)
+.ENDALIASES
+
+
+**** RESUMING "CSE209Project .cir" ****
+.probe
+
+
+.END
+
+**** 09/11/21 00:23:02 *********** Evaluation PSpice (Nov 1999) **************
+
+ * I:\3. East West University\BSC   IN   CSE\COURSE\5th SEMESTER = SUMMER 2021\CSE209\CSE209 Lab Experiment\Project\Project in Sir\CS
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   CP)     .4571  (  CP1)     .4848  (  CP2)     .4615  (  NEG)     .4571      
+
+(  POS)     .3429  ( NEG1)     .4848  ( NEG2)     .4615  ( POS1)     .1212      
+
+( POS2)     .3077  ($N_0001)     .8000                   ($N_0002)     .4571    
+
+($N_0003)     .6061                   ($N_0004)    0.0000                       
+
+($N_0005)     .4571                   ($N_0006)     .4572                       
+
+($N_0007)     .7692                   ($N_0008)     .3846                       
+
+($N_0009)     .4563                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    VH_H1        1.143E-01
+    VH_H2        1.212E-01
+    V_V3        -4.563E-04
+    V_V1         2.424E-01
+    VH_H4        1.154E-01
+
+    TOTAL POWER DISSIPATION   2.09E-04  WATTS
+
+
+**** 09/11/21 00:23:02 *********** Evaluation PSpice (Nov 1999) **************
+
+ * I:\3. East West University\BSC   IN   CSE\COURSE\5th SEMESTER = SUMMER 2021\CSE209\CSE209 Lab Experiment\Project\Project in Sir\CS
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+
+
+**** VOLTAGE-CONTROLLED CURRENT SOURCES
+
+
+NAME         G_G1        G_G2        G_G4      
+I-SOURCE    -2.286E-01  -7.273E-01  -3.077E-01
+
+
+**** CURRENT-CONTROLLED VOLTAGE SOURCES
+
+
+NAME         H_H1        H_H2        H_H4      
+V-SOURCE     4.571E-01   4.848E-01   4.615E-01
+I-SOURCE    -1.029E+00  -1.333E+00  -1.077E+00
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME             .36
+

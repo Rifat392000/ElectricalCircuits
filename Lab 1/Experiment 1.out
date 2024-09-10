@@ -1,0 +1,103 @@
+
+**** 08/26/22 19:35:03 *********** Evaluation PSpice (Nov 1999) **************
+
+ * I:\3. East West University\BSC   IN   CSE\COURSE\5th SEMESTER = SUMMER 2021\CSE209\CSE209 Lab Experiment\Lab 1\Experiment 1.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.1 - Web Update 1
+* Fri Aug 26 16:04:20 2022
+
+
+
+** Analysis setup **
+.DC LIN V_E 0 10 1 
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "Experiment 1.net"
+
+**** INCLUDING "Experiment 1.net" ****
+* Schematics Netlist *
+
+
+
+V_E         $N_0001 0 5V
+R_R         $N_0001 0  1000  
+
+**** RESUMING "Experiment 1.cir" ****
+.INC "Experiment 1.als"
+
+
+
+**** INCLUDING "Experiment 1.als" ****
+* Schematics Aliases *
+
+.ALIASES
+V_E             E(+=$N_0001 -=0 )
+R_R             R(1=$N_0001 2=0 )
+.ENDALIASES
+
+
+**** RESUMING "Experiment 1.cir" ****
+.probe
+
+
+.END
+
+**** 08/26/22 19:35:03 *********** Evaluation PSpice (Nov 1999) **************
+
+ * I:\3. East West University\BSC   IN   CSE\COURSE\5th SEMESTER = SUMMER 2021\CSE209\CSE209 Lab Experiment\Lab 1\Experiment 1.sch
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+($N_0001)    5.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_E         -5.000E-03
+
+    TOTAL POWER DISSIPATION   2.50E-02  WATTS
+
+
+**** 08/26/22 19:35:03 *********** Evaluation PSpice (Nov 1999) **************
+
+ * I:\3. East West University\BSC   IN   CSE\COURSE\5th SEMESTER = SUMMER 2021\CSE209\CSE209 Lab Experiment\Lab 1\Experiment 1.sch
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME             .02
+

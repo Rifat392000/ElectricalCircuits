@@ -1,0 +1,219 @@
+
+**** 08/10/21 04:32:52 *********** Evaluation PSpice (Nov 1999) **************
+
+ * I:\3. East West University\BSC   IN   CSE\COURSE\5th SEMESTER = SUMMER 2021\CSE209\CSE209 Lab Experiment\Lab 4\Lab Material\Experi
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.1 - Web Update 1
+* Tue Aug 10 04:28:30 2021
+
+
+
+** Analysis setup **
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "Experiment 4.net"
+
+**** INCLUDING "Experiment 4.net" ****
+* Schematics Netlist *
+
+
+
+V_V1         $N_0001 0 10V
+R_R1         $N_0001 $N_0002  8  
+R_R4         $N_0002 Positive  16  
+R_R8         $N_0003 0  8  
+R_R13         $N_0005 $N_0004  8  
+V_V2         $N_0005 0 10V
+R_R14         $N_0004 a  16  
+R_R9         $N_0006 0  8  
+R_R19         $N_0007 X  8  
+V_V3         $N_0007 0 10V
+R_R17         $N_0008 0  4  
+R_R15         $N_0009 0  8  
+R_R31         $N_0011 $N_0010  8  
+V_V5         $N_0011 0 10V
+R_R27         $N_0012 0  8  
+R_R2         $N_0013 $N_0003  20  
+R_R10         $N_0014 $N_0006  20  
+R_R12         a 0  4  
+R_R16         $N_0015 $N_0009  20  
+R_R20         Z $N_0008  16  
+R_R28         $N_0016 $N_0012  20  
+R_R32         $N_0010 TESLA  16  
+R_R30         SPACEX 0  4  
+F_F1         $N_0016 $N_0010 VF_F1 0.5
+VF_F1        TESLA SPACEX 0V
+G_G1         $N_0014 $N_0004 a 0 0.5
+H_H2         X $N_0015 VH_H2 0.5
+VH_H2        X Z 0V
+E_E1         $N_0002 $N_0013 Positive 0 0.5
+R_R6         Positive 0  4  
+
+**** RESUMING "Experiment 4.cir" ****
+.INC "Experiment 4.als"
+
+
+
+**** INCLUDING "Experiment 4.als" ****
+* Schematics Aliases *
+
+.ALIASES
+V_V1            V1(+=$N_0001 -=0 )
+R_R1            R1(1=$N_0001 2=$N_0002 )
+R_R4            R4(1=$N_0002 2=Positive )
+R_R8            R8(1=$N_0003 2=0 )
+R_R13           R13(1=$N_0005 2=$N_0004 )
+V_V2            V2(+=$N_0005 -=0 )
+R_R14           R14(1=$N_0004 2=a )
+R_R9            R9(1=$N_0006 2=0 )
+R_R19           R19(1=$N_0007 2=X )
+V_V3            V3(+=$N_0007 -=0 )
+R_R17           R17(1=$N_0008 2=0 )
+R_R15           R15(1=$N_0009 2=0 )
+R_R31           R31(1=$N_0011 2=$N_0010 )
+V_V5            V5(+=$N_0011 -=0 )
+R_R27           R27(1=$N_0012 2=0 )
+R_R2            R2(1=$N_0013 2=$N_0003 )
+R_R10           R10(1=$N_0014 2=$N_0006 )
+R_R12           R12(1=a 2=0 )
+R_R16           R16(1=$N_0015 2=$N_0009 )
+R_R20           R20(1=Z 2=$N_0008 )
+R_R28           R28(1=$N_0016 2=$N_0012 )
+R_R32           R32(1=$N_0010 2=TESLA )
+R_R30           R30(1=SPACEX 2=0 )
+F_F1            F1(3=$N_0016 4=$N_0010 )
+VF_F1           F1(1=TESLA 2=SPACEX )
+G_G1            G1(3=$N_0014 4=$N_0004 1=a 2=0 )
+H_H2            H2(3=X 4=$N_0015 )
+VH_H2           H2(1=X 2=Z )
+E_E1            E1(3=$N_0002 4=$N_0013 1=Positive 2=0 )
+R_R6            R6(1=Positive 2=0 )
+_    _(TESLA=TESLA)
+_    _(SPACEX=SPACEX)
+_    _(a=a)
+_    _(X=X)
+_    _(Z=Z)
+_    _(Positive=Positive)
+_    _(Negative=0)
+_    _(b=0)
+.ENDALIASES
+
+
+**** RESUMING "Experiment 4.cir" ****
+.probe
+
+
+.END
+
+**** 08/10/21 04:32:52 *********** Evaluation PSpice (Nov 1999) **************
+
+ * I:\3. East West University\BSC   IN   CSE\COURSE\5th SEMESTER = SUMMER 2021\CSE209\CSE209 Lab Experiment\Lab 4\Lab Material\Experi
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(    a)    3.3333  (    X)    5.9574  (    Z)    5.9574  (TESLA)    1.6667      
+
+(SPACEX)    1.6667 ($N_0001)   10.0000                   ($N_0002)    6.0345    
+
+($N_0003)    1.5517                   ($N_0004)   16.6670                       
+
+($N_0005)   10.0000                   ($N_0006)  -13.3330                       
+
+($N_0007)   10.0000                   ($N_0008)    1.1915                       
+
+($N_0009)    1.6596                   ($N_0010)    8.3333                       
+
+($N_0011)   10.0000                   ($N_0012)   -1.6667                       
+
+($N_0013)    5.4310                   ($N_0014)  -46.6670                       
+
+($N_0015)    5.8085                   ($N_0016)   -5.8333                       
+
+(Positive)    1.2069                  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -4.957E-01
+    V_V2         8.333E-01
+    V_V3        -5.053E-01
+    V_V5        -2.083E-01
+    VF_F1        4.167E-01
+    VH_H2        2.979E-01
+
+    TOTAL POWER DISSIPATION   3.76E+00  WATTS
+
+
+**** 08/10/21 04:32:52 *********** Evaluation PSpice (Nov 1999) **************
+
+ * I:\3. East West University\BSC   IN   CSE\COURSE\5th SEMESTER = SUMMER 2021\CSE209\CSE209 Lab Experiment\Lab 4\Lab Material\Experi
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+
+
+**** VOLTAGE-CONTROLLED CURRENT SOURCES
+
+
+NAME         G_G1      
+I-SOURCE     1.667E+00
+
+
+**** VOLTAGE-CONTROLLED VOLTAGE SOURCES
+
+
+NAME         E_E1      
+V-SOURCE     6.034E-01
+I-SOURCE     1.940E-01
+
+
+**** CURRENT-CONTROLLED CURRENT SOURCES
+
+
+NAME         F_F1      
+I-SOURCE     2.083E-01
+
+
+**** CURRENT-CONTROLLED VOLTAGE SOURCES
+
+
+NAME         H_H2      
+V-SOURCE     1.489E-01
+I-SOURCE     2.074E-01
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME            0.00
+

@@ -1,0 +1,127 @@
+
+**** 08/26/22 19:35:40 *********** Evaluation PSpice (Nov 1999) **************
+
+ * I:\3. East West University\BSC   IN   CSE\COURSE\5th SEMESTER = SUMMER 2021\CSE209\CSE209 Lab Experiment\Lab 2\Experiment 2.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.1 - Web Update 1
+* Thu Aug 05 10:34:04 2021
+
+
+
+** Analysis setup **
+.DC LIN V_E 0 3 1 
+.OP 
+.OP
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "Experiment 2.net"
+
+**** INCLUDING "Experiment 2.net" ****
+* Schematics Netlist *
+
+
+
+R_R2         0 Voltmeter-  47  
+E_E1         $N_0001 0 Voltmeter+ Voltmeter- 1
+R_R4         0 $N_0001  1k  
+R_R1         Voltmeter+ Voltmeter-  100  
+R_R3         Voltmeter- $N_0002  100  
+V_E         Voltmeter+ 0 4V
+v_V2         $N_0002 0 0
+
+**** RESUMING "Experiment 2.cir" ****
+.INC "Experiment 2.als"
+
+
+
+**** INCLUDING "Experiment 2.als" ****
+* Schematics Aliases *
+
+.ALIASES
+R_R2            R2(1=0 2=Voltmeter- )
+E_E1            E1(3=$N_0001 4=0 1=Voltmeter+ 2=Voltmeter- )
+R_R4            R4(1=0 2=$N_0001 )
+R_R1            R1(1=Voltmeter+ 2=Voltmeter- )
+R_R3            R3(1=Voltmeter- 2=$N_0002 )
+V_E             E(+=Voltmeter+ -=0 )
+v_V2            V2(+=$N_0002 -=0 )
+_    _(Voltmeter-=Voltmeter-)
+_    _(Voltmeter+=Voltmeter+)
+.ENDALIASES
+
+
+**** RESUMING "Experiment 2.cir" ****
+.probe
+
+
+.END
+
+**** 08/26/22 19:35:40 *********** Evaluation PSpice (Nov 1999) **************
+
+ * I:\3. East West University\BSC   IN   CSE\COURSE\5th SEMESTER = SUMMER 2021\CSE209\CSE209 Lab Experiment\Lab 2\Experiment 2.sch
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+($N_0001)    3.0309                   ($N_0002)    0.0000                       
+
+(Voltmeter+)    4.0000                (Voltmeter-)     .9691                
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_E         -3.031E-02
+    v_V2         9.691E-03
+
+    TOTAL POWER DISSIPATION   1.21E-01  WATTS
+
+
+**** 08/26/22 19:35:40 *********** Evaluation PSpice (Nov 1999) **************
+
+ * I:\3. East West University\BSC   IN   CSE\COURSE\5th SEMESTER = SUMMER 2021\CSE209\CSE209 Lab Experiment\Lab 2\Experiment 2.sch
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+
+
+**** VOLTAGE-CONTROLLED VOLTAGE SOURCES
+
+
+NAME         E_E1      
+V-SOURCE     3.031E+00
+I-SOURCE    -3.031E-03
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME            0.00
+

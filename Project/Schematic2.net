@@ -1,0 +1,16 @@
+* Schematics Netlist *
+
+
+
+R_R1         POS NEG  1  
+R_R2         POS 0  4  
+R_R3         $N_0001 0  1  
+R_R4         CP 0  4  
+R_R5         NEG $N_0002  2  
+H_H1         $N_0001 POS VH_H1 4
+VH_H1        NEG CP 0V
+G_G1         NEG $N_0001 POS NEG 2
+R_R7         $N_0003 0  5  
+R_R6         $N_0004 0  2  
+I_I3         $N_0004 $N_0003 DC 4A  
+V_V1         $N_0002 0 10

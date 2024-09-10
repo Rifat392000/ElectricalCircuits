@@ -1,0 +1,24 @@
+* I:\3. East West University\BSC   IN   CSE\COURSE\5th SEMESTER = SUMMER 2021\CSE209\CSE209 Lab Experiment\Project\Project 1.sch
+
+* Schematics Version 9.1 - Web Update 1
+* Fri Sep 10 01:34:11 2021
+
+
+.PARAM         RVAR=10 
+
+** Analysis setup **
+.DC LIN PARAM RVAR 0.001 10 0.001 
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "Project 1.net"
+.INC "Project 1.als"
+
+
+.probe
+
+
+.END

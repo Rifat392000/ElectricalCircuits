@@ -1,0 +1,155 @@
+
+**** 08/10/21 10:53:40 *********** Evaluation PSpice (Nov 1999) **************
+
+ * I:\3. East West University\BSC   IN   CSE\COURSE\5th SEMESTER = SUMMER 2021\CSE209\CSE209 Lab Experiment\Lab 4\Lab Material\Experi
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.1 - Web Update 1
+* Tue Aug 10 10:53:39 2021
+
+
+
+** Analysis setup **
+.OP 
+.OP
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "Experiment 4 (Lab Practice Problem).net"
+
+**** INCLUDING "Experiment 4 (Lab Practice Problem).net" ****
+* Schematics Netlist *
+
+
+
+R_R3         X 0  8  
+H_H1         $N_0001 Voltmeter+ VH_H1 0.5
+VH_H1        A B 0V
+V_V1         A 0 10V
+E_E2         $N_0002 0 Voltmeter+ X 1
+R_R7         0 $N_0002  1k  
+R_R5         $N_0003 0  4  
+G_G2         $N_0004 $N_0001 X 0 0.5
+R_R1         B $N_0001  8  
+R_R4         $N_0004 $N_0003  16  
+R_R2         Voltmeter+ X  20  
+
+**** RESUMING "Experiment 4 (Lab Practice Problem).cir" ****
+.INC "Experiment 4 (Lab Practice Problem).als"
+
+
+
+**** INCLUDING "Experiment 4 (Lab Practice Problem).als" ****
+* Schematics Aliases *
+
+.ALIASES
+R_R3            R3(1=X 2=0 )
+H_H1            H1(3=$N_0001 4=Voltmeter+ )
+VH_H1           H1(1=A 2=B )
+V_V1            V1(+=A -=0 )
+E_E2            E2(3=$N_0002 4=0 1=Voltmeter+ 2=X )
+R_R7            R7(1=0 2=$N_0002 )
+R_R5            R5(1=$N_0003 2=0 )
+G_G2            G2(3=$N_0004 4=$N_0001 1=X 2=0 )
+R_R1            R1(1=B 2=$N_0001 )
+R_R4            R4(1=$N_0004 2=$N_0003 )
+R_R2            R2(1=Voltmeter+ 2=X )
+_    _(A=A)
+_    _(Voltmeter+=Voltmeter+)
+_    _(Voltmeter-=X)
+_    _(X=X)
+_    _(Y=0)
+_    _(B=B)
+.ENDALIASES
+
+
+**** RESUMING "Experiment 4 (Lab Practice Problem).cir" ****
+.probe
+
+
+.END
+
+**** 08/10/21 10:53:40 *********** Evaluation PSpice (Nov 1999) **************
+
+ * I:\3. East West University\BSC   IN   CSE\COURSE\5th SEMESTER = SUMMER 2021\CSE209\CSE209 Lab Experiment\Lab 4\Lab Material\Experi
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(    A)   10.0000  (    B)   10.0000  (    X)   32.0000  ($N_0001)  106.0000    
+
+($N_0002)   80.0000                   ($N_0003)  -64.0000                       
+
+($N_0004) -320.0000                   (Voltmeter+)  112.0000                
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    VH_H1       -1.200E+01
+    V_V1         1.200E+01
+
+    TOTAL POWER DISSIPATION  -1.20E+02  WATTS
+
+
+**** 08/10/21 10:53:40 *********** Evaluation PSpice (Nov 1999) **************
+
+ * I:\3. East West University\BSC   IN   CSE\COURSE\5th SEMESTER = SUMMER 2021\CSE209\CSE209 Lab Experiment\Lab 4\Lab Material\Experi
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+
+
+**** VOLTAGE-CONTROLLED CURRENT SOURCES
+
+
+NAME         G_G2      
+I-SOURCE     1.600E+01
+
+
+**** VOLTAGE-CONTROLLED VOLTAGE SOURCES
+
+
+NAME         E_E2      
+V-SOURCE     8.000E+01
+I-SOURCE    -8.000E-02
+
+
+**** CURRENT-CONTROLLED VOLTAGE SOURCES
+
+
+NAME         H_H1      
+V-SOURCE    -6.000E+00
+I-SOURCE     4.000E+00
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME            0.00
+

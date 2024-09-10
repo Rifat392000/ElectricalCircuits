@@ -1,0 +1,118 @@
+
+**** 09/06/21 15:28:07 *********** Evaluation PSpice (Nov 1999) **************
+
+ * I:\3. East West University\BSC   IN   CSE\COURSE\5th SEMESTER = SUMMER 2021\CSE209\CSE209 Lab Experiment\Lab 6\class task.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.1 - Web Update 1
+* Mon Sep 06 15:28:03 2021
+
+
+.PARAM         RVAR=10 
+
+** Analysis setup **
+.DC LIN PARAM RVAR 1 2000 0.1 
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "class task.net"
+
+**** INCLUDING "class task.net" ****
+* Schematics Netlist *
+
+
+
+V_E1         $N_0001 0 10V
+R_R1         $N_0002 $N_0001  1k  
+V_E2         $N_0003 0 5V
+R_R2         $N_0004 $N_0003  3.3k  
+R_R4         $N_0004 $N_0002  10k  
+V_V5         $N_0002 0 10V
+R_RL         0 $N_0004  {RVAR}  
+
+**** RESUMING "class task.cir" ****
+.INC "class task.als"
+
+
+
+**** INCLUDING "class task.als" ****
+* Schematics Aliases *
+
+.ALIASES
+V_E1            E1(+=$N_0001 -=0 )
+R_R1            R1(1=$N_0002 2=$N_0001 )
+V_E2            E2(+=$N_0003 -=0 )
+R_R2            R2(1=$N_0004 2=$N_0003 )
+R_R4            R4(1=$N_0004 2=$N_0002 )
+V_V5            V5(+=$N_0002 -=0 )
+R_RL            RL(1=0 2=$N_0004 )
+.ENDALIASES
+
+
+**** RESUMING "class task.cir" ****
+.probe
+
+
+.END
+
+**** 09/06/21 15:28:07 *********** Evaluation PSpice (Nov 1999) **************
+
+ * I:\3. East West University\BSC   IN   CSE\COURSE\5th SEMESTER = SUMMER 2021\CSE209\CSE209 Lab Experiment\Lab 6\class task.sch
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+($N_0001)   10.0000                   ($N_0002)   10.0000                       
+
+($N_0003)    5.0000                   ($N_0004)     .0251                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_E1         0.000E+00
+    V_E2        -1.508E-03
+    V_V5        -9.975E-04
+
+    TOTAL POWER DISSIPATION   1.75E-02  WATTS
+
+
+**** 09/06/21 15:28:07 *********** Evaluation PSpice (Nov 1999) **************
+
+ * I:\3. East West University\BSC   IN   CSE\COURSE\5th SEMESTER = SUMMER 2021\CSE209\CSE209 Lab Experiment\Lab 6\class task.sch
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME             .55
+

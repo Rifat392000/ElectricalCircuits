@@ -1,0 +1,165 @@
+
+**** 09/11/21 16:45:51 *********** Evaluation PSpice (Nov 1999) **************
+
+ * I:\3. East West University\BSC   IN   CSE\COURSE\5th SEMESTER = SUMMER 2021\CSE209\CSE209 Lab Experiment\Lab 6\Lab Material\Experi
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.1 - Web Update 1
+* Sat Sep 11 16:45:48 2021
+
+
+
+** Analysis setup **
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "Experiment 6.net"
+
+**** INCLUDING "Experiment 6.net" ****
+* Schematics Netlist *
+
+
+
+R_R11         $N_0002 $N_0001  1k  
+R_R12         $N_0002 0  4.7k  
+V_E1         $N_0003 0 10V
+R_R1         $N_0004 $N_0003  1k  
+V_E2         $N_0005 0 5V
+R_RL         0 $N_0006  1k  
+R_R3         $N_0004 0  4.7k  
+R_R7         $N_0008 $N_0007  1k  
+R_R8         $N_0008 0  4.7k  
+V_E3         $N_0007 0 10V
+V_E4         $N_0009 0 5V
+V_E5         $N_0001 0 10V
+V_E6         $N_0010 0 5V
+R_R13         $N_0011 $N_0010  3.3k  
+R_R2         $N_0006 $N_0005  3.3k  
+R_R9         $N_0012 $N_0009  3.3k  
+I_I1         $N_0012 0 DC 0A  
+V_V3         $N_0011 0 0V
+R_R15         $N_0013 0  1k  
+R_R4         $N_0006 $N_0004  1k  
+R_R6         $N_0012 $N_0008  1k  
+R_R10         $N_0011 $N_0002  1k  
+V_E_Th         $N_0014 0 7.090v
+R_R_Th         $N_0014 $N_0013  1.175k  
+
+**** RESUMING "Experiment 6.cir" ****
+.INC "Experiment 6.als"
+
+
+
+**** INCLUDING "Experiment 6.als" ****
+* Schematics Aliases *
+
+.ALIASES
+R_R11           R11(1=$N_0002 2=$N_0001 )
+R_R12           R12(1=$N_0002 2=0 )
+V_E1            E1(+=$N_0003 -=0 )
+R_R1            R1(1=$N_0004 2=$N_0003 )
+V_E2            E2(+=$N_0005 -=0 )
+R_RL            RL(1=0 2=$N_0006 )
+R_R3            R3(1=$N_0004 2=0 )
+R_R7            R7(1=$N_0008 2=$N_0007 )
+R_R8            R8(1=$N_0008 2=0 )
+V_E3            E3(+=$N_0007 -=0 )
+V_E4            E4(+=$N_0009 -=0 )
+V_E5            E5(+=$N_0001 -=0 )
+V_E6            E6(+=$N_0010 -=0 )
+R_R13           R13(1=$N_0011 2=$N_0010 )
+R_R2            R2(1=$N_0006 2=$N_0005 )
+R_R9            R9(1=$N_0012 2=$N_0009 )
+I_I1            I1(+=$N_0012 -=0 )
+V_V3            V3(+=$N_0011 -=0 )
+R_R15           R15(1=$N_0013 2=0 )
+R_R4            R4(1=$N_0006 2=$N_0004 )
+R_R6            R6(1=$N_0012 2=$N_0008 )
+R_R10           R10(1=$N_0011 2=$N_0002 )
+V_E_Th          E_Th(+=$N_0014 -=0 )
+R_R_Th          R_Th(1=$N_0014 2=$N_0013 )
+.ENDALIASES
+
+
+**** RESUMING "Experiment 6.cir" ****
+.probe
+
+
+.END
+
+**** 09/11/21 16:45:51 *********** Evaluation PSpice (Nov 1999) **************
+
+ * I:\3. East West University\BSC   IN   CSE\COURSE\5th SEMESTER = SUMMER 2021\CSE209\CSE209 Lab Experiment\Lab 6\Lab Material\Experi
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+($N_0001)   10.0000                   ($N_0002)    4.5192                       
+
+($N_0003)   10.0000                   ($N_0004)    5.9924                       
+
+($N_0005)    5.0000                   ($N_0006)    3.2599                       
+
+($N_0007)   10.0000                   ($N_0008)    7.7234                       
+
+($N_0009)    5.0000                   ($N_0010)    5.0000                       
+
+($N_0011)    0.0000                   ($N_0012)    7.0900                       
+
+($N_0013)    3.2598                   ($N_0014)    7.0900                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_E1        -4.008E-03
+    V_E2        -5.273E-04
+    V_E3        -2.277E-03
+    V_E4         6.333E-04
+    V_E5        -5.481E-03
+    V_E6        -1.515E-03
+    V_V3         6.034E-03
+    V_E_Th      -3.260E-03
+
+    TOTAL POWER DISSIPATION   1.48E-01  WATTS
+
+
+**** 09/11/21 16:45:51 *********** Evaluation PSpice (Nov 1999) **************
+
+ * I:\3. East West University\BSC   IN   CSE\COURSE\5th SEMESTER = SUMMER 2021\CSE209\CSE209 Lab Experiment\Lab 6\Lab Material\Experi
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME             .02
+

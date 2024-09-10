@@ -1,0 +1,33 @@
+* Schematics Aliases *
+
+.ALIASES
+R_R1            R1(1=POS 2=NEG )
+I_I1            I1(+=0 -=POS )
+R_R2            R2(1=POS 2=0 )
+R_R3            R3(1=$N_0001 2=0 )
+R_R4            R4(1=CP 2=0 )
+R_R7            R7(1=NEG 2=$N_0002 )
+H_H1            H1(3=$N_0001 4=POS )
+VH_H1           H1(1=NEG 2=CP )
+G_G1            G1(3=NEG 4=$N_0001 1=POS 2=NEG )
+I_I2            I2(+=$N_0002 -=0 )
+R_R8            R8(1=POS1 2=NEG1 )
+I_I3            I3(+=0 -=POS1 )
+R_R9            R9(1=POS1 2=0 )
+R_R10           R10(1=$N_0003 2=0 )
+R_R11           R11(1=CP1 2=0 )
+R_R12           R12(1=NEG1 2=$N_0004 )
+H_H2            H2(3=$N_0003 4=POS1 )
+VH_H2           H2(1=NEG1 2=CP1 )
+G_G2            G2(3=NEG1 4=$N_0003 1=POS1 2=NEG1 )
+V_V1            V1(+=$N_0004 -=0 )
+_    _(CP=CP)
+_    _(POS=POS)
+_    _(NEG=NEG)
+_    _(CN=NEG)
+_    _(CP1=CP1)
+_    _(POS1=POS1)
+_    _(CN1=NEG1)
+_    _(NEG1=NEG1)
+.ENDALIASES
+

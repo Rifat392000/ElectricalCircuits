@@ -1,0 +1,124 @@
+
+**** 09/06/21 10:54:08 *********** Evaluation PSpice (Nov 1999) **************
+
+ * I:\3. East West University\BSC   IN   CSE\COURSE\5th SEMESTER = SUMMER 2021\CSE209\CSE209 Lab Experiment\Lab 7\Experiment 7 part1.
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.1 - Web Update 1
+* Mon Sep 06 09:40:23 2021
+
+
+
+** Analysis setup **
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "Experiment 7 part1.net"
+
+**** INCLUDING "Experiment 7 part1.net" ****
+* Schematics Netlist *
+
+
+
+I_I1         $N_0001 0 DC 0A  
+R_R1         $N_0003 $N_0002  5  
+V_V1         $N_0003 0 10V
+R_R2         $N_0002 0  5  
+R_R3         $N_0002 $N_0001  10  
+R_R5         $N_0005 $N_0004  5  
+V_V2         $N_0005 0 10V
+V_V3         $N_0006 0 0V
+R_R6         $N_0004 0  5  
+R_R7         $N_0004 $N_0006  10  
+
+**** RESUMING "Experiment 7 part1.cir" ****
+.INC "Experiment 7 part1.als"
+
+
+
+**** INCLUDING "Experiment 7 part1.als" ****
+* Schematics Aliases *
+
+.ALIASES
+I_I1            I1(+=$N_0001 -=0 )
+R_R1            R1(1=$N_0003 2=$N_0002 )
+V_V1            V1(+=$N_0003 -=0 )
+R_R2            R2(1=$N_0002 2=0 )
+R_R3            R3(1=$N_0002 2=$N_0001 )
+R_R5            R5(1=$N_0005 2=$N_0004 )
+V_V2            V2(+=$N_0005 -=0 )
+V_V3            V3(+=$N_0006 -=0 )
+R_R6            R6(1=$N_0004 2=0 )
+R_R7            R7(1=$N_0004 2=$N_0006 )
+.ENDALIASES
+
+
+**** RESUMING "Experiment 7 part1.cir" ****
+.probe
+
+
+.END
+
+**** 09/06/21 10:54:08 *********** Evaluation PSpice (Nov 1999) **************
+
+ * I:\3. East West University\BSC   IN   CSE\COURSE\5th SEMESTER = SUMMER 2021\CSE209\CSE209 Lab Experiment\Lab 7\Experiment 7 part1.
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+($N_0001)    5.0000                   ($N_0002)    5.0000                       
+
+($N_0003)   10.0000                   ($N_0004)    4.0000                       
+
+($N_0005)   10.0000                   ($N_0006)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -1.000E+00
+    V_V2        -1.200E+00
+    V_V3         4.000E-01
+
+    TOTAL POWER DISSIPATION   2.20E+01  WATTS
+
+
+**** 09/06/21 10:54:08 *********** Evaluation PSpice (Nov 1999) **************
+
+ * I:\3. East West University\BSC   IN   CSE\COURSE\5th SEMESTER = SUMMER 2021\CSE209\CSE209 Lab Experiment\Lab 7\Experiment 7 part1.
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME             .02
+

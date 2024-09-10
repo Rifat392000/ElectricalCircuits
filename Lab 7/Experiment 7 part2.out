@@ -1,0 +1,112 @@
+
+**** 09/06/21 10:02:49 *********** Evaluation PSpice (Nov 1999) **************
+
+ * I:\3. East West University\BSC   IN   CSE\COURSE\5th SEMESTER = SUMMER 2021\CSE209\CSE209 Lab Experiment\Lab 7\Experiment 7 part2.
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.1 - Web Update 1
+* Mon Sep 06 09:53:57 2021
+
+
+
+** Analysis setup **
+.DC LIN V_E 0V 20V 1V 
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "Experiment 7 part2.net"
+
+**** INCLUDING "Experiment 7 part2.net" ****
+* Schematics Netlist *
+
+
+
+R_R1         $N_0002 $N_0001  5  
+R_R2         $N_0001 0  5  
+V_E         $N_0002 0 10V
+R_R3         $N_0001 $N_0003  10 
+R_RL         $N_0003 0  10  
+ 
+
+**** RESUMING "Experiment 7 part2.cir" ****
+.INC "Experiment 7 part2.als"
+
+
+
+**** INCLUDING "Experiment 7 part2.als" ****
+* Schematics Aliases *
+
+.ALIASES
+R_R1            R1(1=$N_0002 2=$N_0001 )
+R_R2            R2(1=$N_0001 2=0 )
+V_E             E(+=$N_0002 -=0 )
+R_RL            RL(1=$N_0003 2=0 )
+R_R3            R3(1=$N_0001 2=$N_0003 )
+.ENDALIASES
+
+
+**** RESUMING "Experiment 7 part2.cir" ****
+.probe
+
+
+.END
+
+**** 09/06/21 10:02:49 *********** Evaluation PSpice (Nov 1999) **************
+
+ * I:\3. East West University\BSC   IN   CSE\COURSE\5th SEMESTER = SUMMER 2021\CSE209\CSE209 Lab Experiment\Lab 7\Experiment 7 part2.
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+($N_0001)    4.4444                   ($N_0002)   10.0000                       
+
+($N_0003)    2.2222                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_E         -1.111E+00
+
+    TOTAL POWER DISSIPATION   1.11E+01  WATTS
+
+
+**** 09/06/21 10:02:49 *********** Evaluation PSpice (Nov 1999) **************
+
+ * I:\3. East West University\BSC   IN   CSE\COURSE\5th SEMESTER = SUMMER 2021\CSE209\CSE209 Lab Experiment\Lab 7\Experiment 7 part2.
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME            0.00
+

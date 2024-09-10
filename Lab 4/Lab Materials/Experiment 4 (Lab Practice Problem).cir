@@ -1,0 +1,23 @@
+* I:\3. East West University\BSC   IN   CSE\COURSE\5th SEMESTER = SUMMER 2021\CSE209\CSE209 Lab Experiment\Lab 4\Lab Material\Experiment 4 (Lab Practice Problem).sch
+
+* Schematics Version 9.1 - Web Update 1
+* Thu Sep 02 09:35:24 2021
+
+
+
+** Analysis setup **
+.OP 
+.OP
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "Experiment 4 (Lab Practice Problem).net"
+.INC "Experiment 4 (Lab Practice Problem).als"
+
+
+.probe
+
+
+.END

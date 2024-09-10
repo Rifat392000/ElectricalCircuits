@@ -1,0 +1,22 @@
+* I:\3. East West University\BSC   IN   CSE\COURSE\5th SEMESTER = SUMMER 2021\CSE209\CSE209 Lab Experiment\Lab 3\Lab in Sir\Experiment 3.sch
+
+* Schematics Version 9.1 - Web Update 1
+* Thu Sep 02 10:20:35 2021
+
+
+
+** Analysis setup **
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "Experiment 3.net"
+.INC "Experiment 3.als"
+
+
+.probe
+
+
+.END

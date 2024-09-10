@@ -1,0 +1,11 @@
+* Schematics Netlist *
+
+
+
+R_R2         0 Voltmeter-  47  
+E_E1         $N_0001 0 Voltmeter+ Voltmeter- 1
+R_R4         0 $N_0001  1k  
+R_R1         Voltmeter+ Voltmeter-  100  
+R_R3         Voltmeter- $N_0002  100  
+V_E         Voltmeter+ 0 3v
+v_V2         $N_0002 0 0
